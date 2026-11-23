@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أساسيات الهندسة الصناعية | د. رامز عساف</title>
+<meta name="description" content="كتاب عربي مفتوح في أساسيات الهندسة الصناعية: العوامل البشرية، القياس، العمليات، الجودة، المخزون، بحوث العمليات، الاقتصاد الهندسي، والاستدامة. للقراءة على الويب والتحميل بصيغة PDF.">
+<meta property="og:title" content="أساسيات الهندسة الصناعية | د. رامز عساف">
+<meta property="og:image" content="media/image1.jpg">
+<style>
+@font-face{font-family:'Amiri';font-weight:400;src:url(assets/fonts/amiri-arabic-400-normal.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:'Amiri';font-weight:700;src:url(assets/fonts/amiri-arabic-700-normal.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:'Amiri';font-weight:400;src:url(assets/fonts/amiri-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Amiri';font-weight:700;src:url(assets/fonts/amiri-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Noto Sans Arabic';font-weight:400;src:url(assets/fonts/noto-sans-arabic-arabic-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Noto Sans Arabic';font-weight:700;src:url(assets/fonts/noto-sans-arabic-arabic-700-normal.woff2) format('woff2')}
+@font-face{font-family:'STIX Two Math';src:url(assets/fonts/stix-two-math-latin-400-normal.woff2) format('woff2')}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:'Noto Sans Arabic',sans-serif;color:#1d2430;background:#f6f4ef;line-height:1.8}
+.hero{background:linear-gradient(135deg,#14202e 0%,#24364d 100%);color:#fff;padding:64px 24px}
+.wrap{max-width:1040px;margin:0 auto}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.kicker{color:#e9b38f;font-size:15px;letter-spacing:.5px;margin:0 0 6px}
+h1{font-family:'Amiri',serif;font-size:56px;line-height:1.3;margin:0 0 6px}
+.author{font-size:20px;color:#d6dde6;margin:0 0 22px}
+.lead{font-family:'Amiri',serif;font-size:21px;color:#eef1f5;margin:0 0 30px;max-width:560px}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:8px;font-size:17px;font-weight:700;text-decoration:none}
+.btn.primary{background:#c2552d;color:#fff}
+.btn.primary:hover{background:#a8461f}
+.btn.ghost{border:1.5px solid #9fb0c4;color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.meta{margin-top:16px;color:#9fb0c4;font-size:14px}
+.cover img{width:100%;max-width:360px;display:block;margin:0 auto;border-radius:4px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+section{padding:56px 24px}
+h2{font-size:28px;margin:0 0 22px;color:#14202e}
+.about{font-family:'Amiri',serif;font-size:20px;max-width:760px}
+ol.chapters{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+ol.chapters a{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #e3e0d8;border-radius:10px;padding:14px 16px;color:#1d2430;text-decoration:none;font-size:16.5px}
+ol.chapters a:hover{border-color:#c2552d}
+.n{flex:none;width:34px;height:34px;border-radius:50%;background:#14202e;color:#fff;display:grid;place-items:center;font-weight:700}
+.n.alt{background:#c2552d}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature{background:#fff;border-radius:10px;padding:20px;border:1px solid #e3e0d8}
+.feature b{display:block;font-size:30px;color:#c2552d}
+footer{background:#14202e;color:#9fb0c4;text-align:center;padding:26px;font-size:14px}
+footer a{color:#e9b38f}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.cover{order:-1}h1{font-size:40px}ol.chapters,.features{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+ <div>
+  <p class="kicker">كتاب جامعي باللغة العربية · 2026</p>
+  <h1>أساسيات الهندسة الصناعية</h1>
+  <p class="author">د. رامز عساف</p>
+  <p class="lead">من موقف يومي في مصنع أو عيادة أو مستودع، إلى سؤال يمكن قياسه، إلى قرار يمكن الدفاع عنه.</p>
+  <div class="actions">
+   <a class="btn primary" href="Industrial_Engineering_Basics_Ramiz_Assaf.pdf" download>⬇ تحميل الكتاب PDF</a>
+   <a class="btn ghost" href="book.html">اقرأ على الويب</a>
+  </div>
+  <p class="meta">PDF بحجم A5 · 5.2 ميغابايت · مجاني</p>
+ </div>
+ <div class="cover"><img src="media/image1.jpg" alt="غلاف كتاب أساسيات الهندسة الصناعية"></div>
+</div></header>
+
+<section><div class="wrap">
+ <h2>عن الكتاب</h2>
+ <p class="about">يفتح هذا الكتاب باب الهندسة الصناعية من موقف يومي إلى سؤال يمكن قياسه. يجمع السرد التعليمي مع أمثلة حسابية ومسائل للتدريب، ويربط فهم النظام بالقياس والقرار والتحسين. تغطي الفصول العوامل البشرية والقياس والعمليات والجودة والمخزون وبحوث العمليات والاقتصاد الهندسي والاستدامة واستمرارية العمل.</p>
+ <div class="features">
+  <div class="feature"><b>9</b>فصول ومشروع تطبيقي ختامي</div>
+  <div class="feature"><b>42</b>معادلة مرقمة مع ملحق مرجعي للرموز</div>
+  <div class="feature"><b>32</b>مسألة حسابية بحلول كاملة</div>
+ </div>
+</div></section>
+
+<section style="background:#efece5"><div class="wrap">
+ <h2>المحتويات</h2>
+ <ol class="chapters">
+ <li><a href="book.html#c2"><span class="n">1</span><span>مدخل إلى الهندسة الصناعية وفهم النظم</span></a></li><li><a href="book.html#c3"><span class="n">2</span><span>العوامل البشرية والسلامة المهنية</span></a></li><li><a href="book.html#c4"><span class="n">3</span><span>القياس والبيانات</span></a></li><li><a href="book.html#c5"><span class="n">4</span><span>العمليات والإنتاجية</span></a></li><li><a href="book.html#c6"><span class="n">5</span><span>الجودة وضبط العمليات</span></a></li><li><a href="book.html#c7"><span class="n">6</span><span>المخزون وسلاسل التوريد</span></a></li><li><a href="book.html#c8"><span class="n">7</span><span>بحوث العمليات واتخاذ القرار</span></a></li><li><a href="book.html#c9"><span class="n">8</span><span>التحليل الاقتصادي الهندسي</span></a></li><li><a href="book.html#c10"><span class="n">9</span><span>التحسين والاستدامة واستمرارية العمل</span></a></li><li><a href="book.html#c11"><span class="n alt">+</span><span>المشروع التطبيقي الختامي: من الملاحظة إلى قرار قابل للدفاع</span></a></li><li><a href="book.html#c12"><span class="n alt">+</span><span>ملحق أ حلول المسائل الحسابية</span></a></li><li><a href="book.html#c13"><span class="n alt">+</span><span>ملحق ب مرجع المعادلات</span></a></li><li><a href="book.html#c14"><span class="n alt">+</span><span>المسرد العربي الإنجليزي الموحد</span></a></li><li><a href="book.html#c15"><span class="n alt">+</span><span>فهرس الموضوعات</span></a></li>
+ </ol>
+</div></section>
+
+<footer>© 2026 د. رامز عساف · جامعة النجاح الوطنية · <a href="https://github.com/ramizassaf/industrial-engineering-basics">المستودع على GitHub</a></footer>
+</body>
+</html>
